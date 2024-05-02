@@ -84,6 +84,7 @@ body {
   min-width: 350px;
   min-height: 360px;
   gap: 24px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .profile-photo {
