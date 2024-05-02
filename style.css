@@ -1,0 +1,149 @@
+/* 
+## Colors
+
+### Primary
+
+Dark cyan: hsl(185, 75%, 39%)
+Very dark desaturated blue: hsl(229, 23%, 23%)
+Dark grayish blue: hsl(227, 10%, 46%)
+
+### Neutral
+
+Dark gray: hsl(0, 0%, 59%)
+
+## Typography
+
+### Body Copy
+
+- Font size (name and stats): 18px
+
+### Font
+
+- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700
+*/
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+body {
+  background: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+  background-repeat: no-repeat, no-repeat;
+  background-color: hsl(185deg, 75%, 39%);
+  font-family: "Kumbh Sans";
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+  display: grid;
+  place-content: center center;
+}
+
+.card-bg {
+  background-image: url(images/bg-pattern-card.svg);
+  top: 0;
+  height: 35%;
+  width: 100%;
+  position: absolute;
+  border-radius: 10px 10px 0 0;
+  z-index: 0;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 350px;
+  min-height: 360px;
+  gap: 24px;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  border: 5px solid white;
+  max-height: 96px;
+  max-width: 96px;
+  z-index: 1;
+  margin-top: 44px;
+}
+
+.name-place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.name-place p {
+  display: flex;
+  gap: 8px;
+  font-size: 18px;
+}
+
+.name-place .city {
+  font-size: 14px;
+}
+
+.name-place span {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.line {
+  width: 100%;
+  border-bottom: 1px solid var(--dark-gray);
+  opacity: 0.3;
+}
+
+.stats-container {
+  display: flex;
+  gap: 64px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.stats .number,
+.name-place span {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.stats .type {
+  font-size: 10px;
+  letter-spacing: 2px;
+}
